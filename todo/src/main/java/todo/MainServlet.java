@@ -37,7 +37,6 @@ public class MainServlet extends HttpServlet {
 		List<TodoDto> doingList = todoDao.getDoings();
 		List<TodoDto> doneList = todoDao.getDones();
 		
-		request.setAttribute("todoDao", todoDao);
 		request.setAttribute("todoList", todoList);
 		request.setAttribute("doingList", doingList);
 		request.setAttribute("doneList", doneList);
