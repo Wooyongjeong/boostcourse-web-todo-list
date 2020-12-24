@@ -36,7 +36,7 @@ public class TodoDao {
 		return insertCount;
 	}
 	
-	public int updateTodo(TodoDto todo) {
+	public int updateTodo(long id, String type) {
 		int updateCount = 0;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -46,8 +46,8 @@ public class TodoDao {
 		String sql = "UPDATE todo SET type = ? WHERE id = ?;";
 		try(Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
 				PreparedStatement ps = conn.prepareStatement(sql)) {
-			ps.setString(1, todo.getType());
-			ps.setLong(2, todo.getId());
+			ps.setString(1, type);
+			ps.setLong(2, id);
 			
 			updateCount = ps.executeUpdate();
 		} catch(Exception ex) {
