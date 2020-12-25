@@ -100,7 +100,7 @@
 				<div id="${item.id }" class="main-content">
 					<div class="main-content-title">${item.title }</div>
 					<div class="main-content-content">등록날짜: ${item.regDate }, ${item.name }, 우선순위 ${item.sequence }</div>
-					<input class="main-content-btn" type="button" value="➡" onclick="todo_btn_click(${item.id })"/>
+					<input class="main-content-btn" type="button" value="➡" onclick="btn_click(${item.id }, 'todo');"/>
 				</div>
 			</c:forEach>
 		</div>
@@ -110,7 +110,7 @@
 				<div id="${item.id }" class="main-content">
 					<div class="main-content-title">${item.title }</div>
 					<div class="main-content-content">등록날짜: ${item.regDate }, ${item.name }, 우선순위 ${item.sequence }</div>
-					<input class="main-content-btn" type="button" value="➡" onclick="doing_btn_click(${item.id })"/>
+					<input class="main-content-btn" type="button" value="➡" onclick="btn_click(${item.id }, 'doing');"/>
 				</div>
 			</c:forEach>
 		</div>
@@ -125,4 +125,25 @@
 		</div>
 	</div>
 </body>
+<script>
+function btn_click(id, type) {
+	var xhr = new XMLHttpRequest();
+	var typeDestination = (type === 'todo') ? 'doing' : 'done';
+	xhr.addEventListener("load", function() {
+		if (xhr.status === 200) {
+			var parent = document.getElementById(typeDestination);
+			var item = document.getElementById(id);
+			item.removeChild(item.children[2]);
+			if (typeDestination === 'doing') {
+				var button = "<input class=\"main-content-btn\" type=\"button\" onclick=\"btn_click(" + id + ", \'" + typeDestination + "\');\" value=\"➡\"/>";
+				item.insertAdjacentHTML('beforeend', button);
+			}
+			parent.appendChild(item);
+		}
+	});
+	xhr.open("POST", "./type");
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.send("id=" + id + "&type=" + typeDestination);
+}
+</script>
 </html>
