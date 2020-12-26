@@ -100,7 +100,7 @@ input[type="submit"] {
 			<form action="/todo/add" method="post">
 				<div class="container-title">
 					<div class="container-input-description">어떤 일인가요?</div>
-					<input type="text" name="title" required="true" placeholder="할 일">
+					<input type="text" name="title" required="true" maxlength="24" placeholder="할 일(24자까지)">
 				</div>
 				<div class="container-name">
 					<div class="container-input-description">누가 할일인가요?</div>
