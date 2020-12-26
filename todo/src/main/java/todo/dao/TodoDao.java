@@ -16,7 +16,7 @@ public class TodoDao {
 	private static String dbUser = "connectuser";
 	private static String dbpasswd = "connect123!@#";
 	
-	public int addTodo(TodoDto todo) {
+	public int addTodo(String title, String name, int sequence) {
 		int insertCount = 0;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -26,9 +26,9 @@ public class TodoDao {
 		String sql = "INSERT INTO todo(title, name, sequence) values(?, ?, ?)";
 		try(Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
 				PreparedStatement ps = conn.prepareStatement(sql)) {
-			ps.setString(1, todo.getTitle());
-			ps.setString(2, todo.getName());
-			ps.setInt(3, todo.getSequence());
+			ps.setString(1, title);
+			ps.setString(2, name);
+			ps.setInt(3, sequence);
 			insertCount = ps.executeUpdate();
 		} catch(Exception ex) {
 			ex.printStackTrace();
