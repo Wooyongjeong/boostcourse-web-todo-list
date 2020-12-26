@@ -94,7 +94,7 @@
 		<a href="./add">새로운 TODO 등록</a>
 	</header>
 	<div class="container">
-		<div id="todo" class="main">
+		<div id="TODO" class="main">
 			<div class="main-title">TODO</div>
 			<c:forEach var="item" items="${todoList }">
 				<div id="${item.id }" class="main-content">
@@ -104,7 +104,7 @@
 				</div>
 			</c:forEach>
 		</div>
-		<div id="doing" class="main">
+		<div id="DOING" class="main">
 			<div class="main-title">DOING</div>
 			<c:forEach var="item" items="${doingList }">
 				<div id="${item.id }" class="main-content">
@@ -114,7 +114,7 @@
 				</div>
 			</c:forEach>
 		</div>
-		<div id="done" class="main">
+		<div id="DONE" class="main">
 			<div class="main-title">DONE</div>
 			<c:forEach var="item" items="${doneList }">
 				<div id="${item.id }" class="main-content">
@@ -131,7 +131,6 @@ function btn_click(id, type) {
 	var typeDestination = (type === 'TODO') ? 'DOING' : 'DONE';
 	xhr.addEventListener("load", function() {
 		if (xhr.status === 200) {
-			console.log("success");
 			var parent = document.getElementById(typeDestination);
 			var item = document.getElementById(id);
 			item.removeChild(item.children[2]);
