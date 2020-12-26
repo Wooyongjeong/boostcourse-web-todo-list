@@ -100,11 +100,11 @@ input[type="submit"] {
 			<form action="/todo/add" method="post">
 				<div class="container-title">
 					<div class="container-input-description">어떤 일인가요?</div>
-					<input type="text" name="title" placeholder="할 일">
+					<input type="text" name="title" required="true" placeholder="할 일">
 				</div>
 				<div class="container-name">
 					<div class="container-input-description">누가 할일인가요?</div>
-					<input type="text" name="name" placeholder="이름">
+					<input type="text" name="name" required="true" placeholder="이름">
 				</div>
 				<div class="container-sequence">
 					<div class="container-input-description">우선순위를 선택하세요</div>
