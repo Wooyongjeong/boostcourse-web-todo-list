@@ -63,7 +63,7 @@ public class TodoDao {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		String sql = "select id, title, name, sequence, type, regdate from todo where type = 'TODO' order by regdate desc";
+		String sql = "select id, title, name, sequence, type, regdate from todo where type = 'TODO' order by regdate";
 		try(Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
 				PreparedStatement ps = conn.prepareStatement(sql)) {
 			try(ResultSet rs = ps.executeQuery()) {
@@ -95,7 +95,7 @@ public class TodoDao {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		String sql = "select id, title, name, sequence, type, regdate from todo where type = 'DOING' order by regdate desc";
+		String sql = "select id, title, name, sequence, type, regdate from todo where type = 'DOING' order by regdate";
 		try(Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
 				PreparedStatement ps = conn.prepareStatement(sql)) {
 			try(ResultSet rs = ps.executeQuery()) {
@@ -127,7 +127,7 @@ public class TodoDao {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		String sql = "select id, title, name, sequence, type, regdate from todo where type = 'DONE' order by regdate desc";
+		String sql = "select id, title, name, sequence, type, regdate from todo where type = 'DONE' order by regdate";
 		try(Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
 				PreparedStatement ps = conn.prepareStatement(sql)) {
 			try(ResultSet rs = ps.executeQuery()) {
