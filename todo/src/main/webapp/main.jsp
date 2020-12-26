@@ -131,6 +131,7 @@ function btn_click(id, type) {
 	var typeDestination = (type === 'TODO') ? 'DOING' : 'DONE';
 	xhr.addEventListener("load", function() {
 		if (xhr.status === 200) {
+			console.log("success");
 			var parent = document.getElementById(typeDestination);
 			var item = document.getElementById(id);
 			item.removeChild(item.children[2]);
