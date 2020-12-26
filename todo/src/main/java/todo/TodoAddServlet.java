@@ -39,10 +39,11 @@ public class TodoAddServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		String title = request.getParameter("title");
 		String name = request.getParameter("name");
 		int sequence = Integer.parseInt(request.getParameter("sequence"));
-		
+		System.out.println(title);
 		TodoDao todoDao = new TodoDao();
 		int insertCount = todoDao.addTodo(title, name, sequence);
 		if (insertCount == 1) {
