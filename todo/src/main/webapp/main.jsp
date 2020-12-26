@@ -86,7 +86,7 @@
 	  margin: 5px 30px 0px 0px;
 	}
 </style>
-<title>ToDo List</title>
+<title>TODO LIST</title>
 </head>
 <body>
 	<header>
