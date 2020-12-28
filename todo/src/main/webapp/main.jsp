@@ -100,7 +100,7 @@
 				<div id="${item.id }" class="main-content">
 					<div class="main-content-title">${item.title }</div>
 					<div class="main-content-content">등록날짜: ${item.regDate }, ${item.name }, 우선순위 ${item.sequence }</div>
-					<input class="main-content-btn" type="button" value="➡" onclick="btn_click(${item.id }, 'TODO');"/>
+					<input class="main-content-btn" type="button" value="➡" onclick="arrow_btn_click(${item.id }, 'TODO');"/>
 				</div>
 			</c:forEach>
 		</div>
@@ -110,7 +110,7 @@
 				<div id="${item.id }" class="main-content">
 					<div class="main-content-title">${item.title }</div>
 					<div class="main-content-content">등록날짜: ${item.regDate }, ${item.name }, 우선순위 ${item.sequence }</div>
-					<input class="main-content-btn" type="button" value="➡" onclick="btn_click(${item.id }, 'DOING');"/>
+					<input class="main-content-btn" type="button" value="➡" onclick="arrow_btn_click(${item.id }, 'DOING');"/>
 				</div>
 			</c:forEach>
 		</div>
@@ -126,7 +126,7 @@
 	</div>
 </body>
 <script>
-function btn_click(id, type) {
+function arrow_btn_click(id, type) {
 	var xhr = new XMLHttpRequest();
 	var typeDestination = (type === 'TODO') ? 'DOING' : 'DONE';
 	xhr.addEventListener("load", function() {
@@ -136,7 +136,7 @@ function btn_click(id, type) {
 			var item = document.getElementById(id);
 			item.removeChild(item.children[2]);
 			if (typeDestination === 'DOING') {
-				var button = "<input class=\"main-content-btn\" type=\"button\" onclick=\"btn_click(" + id + ", \'" + typeDestination + "\');\" value=\"➡\"/>";
+				var button = "<input class=\"main-content-btn\" type=\"button\" onclick=\"arrow_btn_click(" + id + ", \'" + typeDestination + "\');\" value=\"➡\"/>";
 				item.insertAdjacentHTML('beforeend', button);
 			}
 			parent.appendChild(item);
