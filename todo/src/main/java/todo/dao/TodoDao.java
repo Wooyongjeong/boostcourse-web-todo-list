@@ -12,9 +12,9 @@ import java.util.List;
 import todo.dto.TodoDto;
 
 public class TodoDao {
-	private static String dburl = "jdbc:mysql://localhost:3306/connectdb?serverTimezone=Asia/Seoul&useSSL=false";
-	private static String dbUser = "connectuser";
-	private static String dbpasswd = "connect123!@#";
+	private static String dburl = "본인의 DB URL을 작성해주세요";
+	private static String dbUser = "본인의 DB Username을 작성해주세요";
+	private static String dbpasswd = "본인의 DB password을 작성해주세요";
 	
 	public int addTodo(String title, String name, int sequence) {
 		int insertCount = 0;
