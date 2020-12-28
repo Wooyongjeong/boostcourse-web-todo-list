@@ -5,8 +5,8 @@
 
  eclipse의 maven 프로젝트를 이용하였고, mysql과 jdbc를 이용하여 구현하였습니다.
 
-![main](https://user-images.githubusercontent.com/38418028/103196820-3ca68e80-4928-11eb-8aff-d6a1d7f5538a.png "할 일 목록 화면")
-![add](https://user-images.githubusercontent.com/38418028/103196873-55af3f80-4928-11eb-8879-069fd451bf42.png "할 일 등록 화면")
+![main](https://user-images.githubusercontent.com/38418028/103202459-d163b900-4935-11eb-89c8-898ac4472222.gif "할 일 목록 화면")
+![add](https://user-images.githubusercontent.com/38418028/103202471-d9235d80-4935-11eb-9cd3-7229446507f8.gif "할 일 등록 화면")
 
 ## 💻 웹프론트엔드 기술요구사항
 * [x] 총 2개의 화면이 존재합니다.
