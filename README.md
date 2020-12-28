@@ -1,15 +1,14 @@
-# boostcourse-web-todo-list
-> [부스트코스 웹 프로그래밍 프로젝트B TO-DO LIST]((https://www.boostcourse.org/web316/project/7/content/6)) 프로젝트입니다.
+# 📋 boostcourse-web-todo-list
+> [부스트코스 웹 프로그래밍 프로젝트B TO-DO LIST](https://www.boostcourse.org/web316/project/7/content/6) 프로젝트입니다.
 
  부스트코스의 웹 프로그래밍(풀스택) 강좌의 `2. DB 연결 웹 앱` 프로젝트입니다.
 
  eclipse의 maven 프로젝트를 이용하였고, mysql과 jdbc를 이용하여 구현하였습니다.
 
-![main](https://user-images.githubusercontent.com/38418028/103196820-3ca68e80-4928-11eb-8aff-d6a1d7f5538a.png "할 일 목록 화면")
-![add](https://user-images.githubusercontent.com/38418028/103196873-55af3f80-4928-11eb-8879-069fd451bf42.png "할 일 등록 화면")
+![main](https://user-images.githubusercontent.com/38418028/103202459-d163b900-4935-11eb-89c8-898ac4472222.gif "할 일 목록 화면")
+![add](https://user-images.githubusercontent.com/38418028/103202471-d9235d80-4935-11eb-9cd3-7229446507f8.gif "할 일 등록 화면")
 
 ## 💻 웹프론트엔드 기술요구사항
-___
 * [x] 총 2개의 화면이 존재합니다.
     * 할 일 목록 화면 (리스트)
     * 할 일 등록 화면 (쓰기)
@@ -21,7 +20,6 @@ ___
 * [x] Ajax는 XMLHTTPRequest를 사용합니다.
 
 ## 🖥 웹백엔드 기술요구사항
-___
 * [x] 프로젝트는 maven프로젝트로 생성합니다.
 * [x] 제공된 테이블 생성 SQL을 이용해서 테이블을 생성합니다.
 * [x] TodoDto 클래스와 TodoDao클래스를 주어진 스펙에 맞게 작성합니다.
@@ -34,7 +32,6 @@ ___
 
 
 ## 🛠 설치 방법
-___
  1. `mysql`에 접속한 후 다음의 테이블을 생성하는 쿼리를 실행합니다.
  ```sql
  CREATE TABLE todo (
@@ -52,6 +49,5 @@ ___
  5. 본인의 server를 통해 프로젝트를 실행합니다.
 
 ## 💡 추가 구현 예정
-___
 * [ ] 상태값이 DONE인 컬럼을 삭제하는 기능
 * [ ] 카테고리 기능
