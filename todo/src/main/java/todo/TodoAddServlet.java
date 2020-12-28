@@ -43,7 +43,7 @@ public class TodoAddServlet extends HttpServlet {
 		String title = request.getParameter("title");
 		String name = request.getParameter("name");
 		int sequence = Integer.parseInt(request.getParameter("sequence"));
-		System.out.println(title);
+		System.out.println("add) " + title + ", " + name + ", " + sequence);
 		TodoDao todoDao = new TodoDao();
 		int insertCount = todoDao.addTodo(title, name, sequence);
 		if (insertCount == 1) {
