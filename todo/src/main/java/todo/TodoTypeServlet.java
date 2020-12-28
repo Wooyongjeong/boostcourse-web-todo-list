@@ -30,7 +30,7 @@ public class TodoTypeServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String idStr = request.getParameter("id");
 		String type = request.getParameter("type");
-		System.out.println(idStr + ", " + type);
+		System.out.println("type) " + idStr + ", " + type);
 		long id = Long.parseLong(idStr);
 		TodoDao todoDao = new TodoDao();
 		int updateCount = todoDao.updateTodo(id, type);
