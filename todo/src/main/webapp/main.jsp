@@ -67,7 +67,7 @@
 	.main-content-title {
 	  color: black;
 	  font-weight: bold;
-	  font-size: 30px;
+	  font-size: 20px;
 	  width: 400px;
 	  height: 30px;
 	  line-height: 30px;
